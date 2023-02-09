@@ -1,5 +1,5 @@
 const fs = require("fs");
-var data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+var data = JSON.parse(fs.readFileSync("./db.json", "utf8"));
 
 
 module.exports = function(app) {
@@ -25,7 +25,7 @@ module.exports = function(app) {
         newNote.id = uniqueId;
         data.push(newNote);
         
-        fs.writeFileSync("./db/db.json", JSON.stringify(data), function(err) {
+        fs.writeFileSync("./db.json", JSON.stringify(data), function(err) {
             if (err) throw (err);        
         }); 
 
