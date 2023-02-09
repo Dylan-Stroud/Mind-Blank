@@ -23,8 +23,7 @@ app.get('/', (req, res) =>
 app.get("/notes", function(req, res) {
     res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
-
-//require("./routes/api-routes")(app);
+require("./routes/api-routes")(app);
 
 // Starts the server to begin listening
 // =============================================================
