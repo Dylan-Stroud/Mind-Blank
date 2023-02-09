@@ -33,7 +33,7 @@ module.exports = function(app) {
 
     });
 
-    
+    /*
     app.delete("/api/notes/:id", function(req, res) {
 
         let noteId = req.params.id;
@@ -48,6 +48,6 @@ module.exports = function(app) {
         }
         fs.writeFileSync("./db/db.json", JSON.stringify(data));
         res.json(data);
-    }); 
+    }); */
 
 }
