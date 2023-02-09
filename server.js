@@ -15,7 +15,7 @@ var PORT = process.env.PORT || 8080
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/assets/", express.static("./assets/"));
+app.use("/assets", express.static("./assets"));
 
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
