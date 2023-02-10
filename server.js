@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.static('public'));
+app.use('/css', express.static('public/assets'));
+app.use('/js', express.static('public/assets'));
   
 // GET Route for homepage
 app.get('/', (req, res) =>
